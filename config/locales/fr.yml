@@ -1,0 +1,16 @@
+fr:
+  refinery:
+    plugins:
+      refinery_page_videos:
+        title: Page Videojs
+        description: "Page Videojs vous permet de lier une ou plusieurs videos à n'importe quelle page dans Refinery, cela vous permet de créer très facilement des galeries d'videos qui peuvent s'afficher dans une lightbox ou popups pour le front end"
+    js:
+      admin:
+        page_videos:
+          add_caption: Ajouter une légende
+          done: Terminé  
+    admin:
+      pages:
+        tabs:
+          videos_bar:
+            add: Ajouter une video

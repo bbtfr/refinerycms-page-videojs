@@ -1,0 +1,39 @@
+<div class='wym_box field videos_field'>
+  <ul id='page_videos' class='clearfix'>
+    <%= f.fields_for :videos do |video_form| %>
+      <li id='video_<%= video_form.object.id %>'>
+        <%= video_form.hidden_field :id %>
+        <span class='title'>
+          <%= video_form.object.title %>
+          <span class='short_info'>(
+            <% video_form.object.short_info.each do |info| %>
+             <%= "#{t(info[0])}: #{info[1]}" %>
+          <% end %>)</span>
+        </span>
+        <% index = video_form.object_name.split('[').last.split(']').first.to_i %>
+        <%= hidden_field_tag "#{f.object_name.demodulize}[videos_attributes][#{index}][video_page_id]", f.object.video_page_id_for_video_index(index) %>
+        <% if Refinery::PageVideos.captions %>
+          <div class='textarea_wrapper_for_wym'>
+            <%= text_area_tag "#{f.object_name.demodulize}[videos_attributes][#{index}][caption]",
+                              f.object.caption_for_video_index(index),
+                              :style => 'display: none',
+                              :id => "page_captions_#{index}",
+                              :class => 'page_caption' %>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+    <li class='empty_video_list'>
+      <%= hidden_field_tag "#{f.object_name.demodulize}[videos_attributes][#{f.object.videos.size}][id]" %>
+      <% if Refinery::PageVideos.captions %>
+        <div class='textarea_wrapper_for_wym'>
+          <%= text_area_tag "#{f.object_name.demodulize}[videos_attributes][#{f.object.videos.size}][caption]",
+                            '',
+                            :style => 'display: none',
+                            :id => "page_captions_#{f.object.videos.size}",
+                            :class => 'page_caption' %>
+        </div>
+      <% end %>
+    </li>
+  </ul>
+</div>

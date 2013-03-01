@@ -1,0 +1,16 @@
+pt-BR:
+  refinery:
+    plugins:
+      refinery_page_videos:
+        title: Videons da Página
+        description: Videons da Página te permite relacionar uma ou mais videons a qualquer página no Refinery, tornando muito simples a criação de galerias de videom no front end com popus no estilo lightbox.
+    js:
+      admin:
+        page_videos:
+          add_caption: Adicionar Legenda
+          done: Feito
+    admin:
+      pages:
+        tabs:
+          videos_bar:
+            add: Adicionar Videom

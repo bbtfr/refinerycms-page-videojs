@@ -1,0 +1,7 @@
+<div class='wym_skin_refinery page_part' id='page_video_picker'>
+  <%= render '/refinery/admin/pages/tabs/videos_bar', :f => f %>
+  <%= render '/refinery/admin/pages/tabs/videos_field', :f => f %>
+</div>
+
+<% content_for :stylesheets, stylesheet_link_tag('refinery/page-video-picker') %>
+<% content_for :javascripts, javascript_include_tag('refinery/page-video-picker') %>

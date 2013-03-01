@@ -1,0 +1,20 @@
+en:
+  refinery:
+    plugins:
+      refinery_page_videos:
+        title: Page Videojs
+        description: Page Videojs allows you to relate one or more videos to any page in Refinery which makes it really easy for you to create simple video galleries with lightbox style popups on the front end page views.
+    js:
+      admin:
+        page_videos:
+          add_caption: Add Caption
+          done: Done
+    admin:
+      pages:
+        tabs:
+          videos_bar:
+            add: Add Video
+          videos_field:
+            file: File
+            link: Link
+            shared_source: Embedded
