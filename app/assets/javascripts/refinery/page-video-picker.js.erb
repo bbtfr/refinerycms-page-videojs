@@ -38,10 +38,10 @@ $(document).ready(function(){
     $(this).parents('li').first().append(hidden);
   });
 
-  reset_functionality();
+  reset_video_functionality();
 });
 
-reset_functionality = function() {
+reset_video_functionality = function() {
   WYMeditor.onload_functions.push(function(){
     $('.wym_box').css({'width':null});
   });
@@ -95,7 +95,7 @@ video_added = function(video) {
   current_list_item.attr('id', 'video_' + video_id).removeClass('empty_video_list');
 
   new_list_item.appendTo($('#page_videos'));
-  reset_functionality();
+  reset_video_functionality();
   close_dialog();
 }
 
