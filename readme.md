@@ -24,7 +24,7 @@ Page Videojs allows you to relate one or more videos to any page in Refinery whi
 Add this line to your applications `Gemfile`
 
 ```ruby
-gem 'refinerycms-page-videojs', '~> 2.0.0'
+gem 'refinerycms-page-videojs', github: 'bbtfr/refinerycms-page-videojs'
 ```
 
 Next run
