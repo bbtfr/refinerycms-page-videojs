@@ -6,7 +6,7 @@ Page Videojs allows you to relate one or more videos to any page in Refinery whi
 
 (And a shameless ripoff of refinerycms-page-images. :)
 
-**It's just test for refinery 2.0, maybe it will work with 2.1**
+**It's just tested for refinery 2.0.**
 
 ## Requirements
 
